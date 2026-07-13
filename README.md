@@ -1,4 +1,4 @@
-# KASPER Lift Solutions · Казахстан
+# Eurasia Lift KZ · Казахстан
 
 Корпоративный сайт официального представителя KASPER в Казахстане
 (г. Астана): поставка, монтаж и сервис лифтов под ключ.
@@ -150,6 +150,7 @@ curl -X POST http://localhost:8080/api/leads \
 - [ ] Rate limiting на `POST /api/leads`.
 - [ ] Заменить SVG-логотип на официальный файл при наличии.
 #   E l e v a t o r  
+ #   E l e v a t o r  
  #   E l e v a t o r  
  #   E l e v a t o r  
  
