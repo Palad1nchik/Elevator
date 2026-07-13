@@ -47,6 +47,8 @@ export default function Home() {
         </div>
       </section>
 
+      <ObjectsTeaser />
+
       <section className="section">
         <div className="container">
           <div className="section-tag">Что мы делаем</div>
@@ -100,9 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ObjectsTeaser />
-
-      <section className="section section-alt">
+      <section className="section">
         <div className="container">
           <div className="section-tag">Как мы работаем</div>
           <h2>Монтаж лифтов под ключ без срывов сроков</h2>

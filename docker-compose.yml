@@ -14,12 +14,12 @@ services:
     restart: unless-stopped
     environment:
       APP_ENV: ${APP_ENV:-production}
-      PORT: "8080"
+      PORT: ${PORT:-8080}
       CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
     expose:
-      - "8080"
+      - "${PORT:-8080}"
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:8080/api/health"]
+      test: ["CMD", "wget", "-qO-", "http://localhost:${PORT:-8080}/api/health"]
       interval: 30s
       timeout: 5s
       retries: 3
@@ -34,6 +34,9 @@ services:
         VITE_API_BASE: /api
     image: kasper-frontend:latest
     restart: unless-stopped
+    environment:
+      # Must match the backend's PORT so nginx proxies /api to the right place.
+      BACKEND_PORT: ${PORT:-8080}
     depends_on:
       - backend
     ports:

@@ -1,0 +1,28 @@
+# Render Blueprint for the Go backend.
+#
+# This exists because the Docker build was failing with
+# "stat /src/cmd/server: directory not found" — Render was building the
+# Docker image from the repository root instead of backend/, so `COPY . .`
+# copied the whole monorepo and ./cmd/server ended up nested one level too
+# deep (at /src/backend/cmd/server, not /src/cmd/server). rootDir fixes
+# that the same way docker-compose.yml's `context: ./backend` does locally.
+#
+# To use: Render Dashboard -> New -> Blueprint -> point at this repo.
+# If the backend service already exists and was created manually (not from
+# this blueprint), Render won't retroactively apply this file to it — either
+# recreate it via Blueprint, or set Root Directory: backend by hand in that
+# service's Settings and redeploy.
+services:
+  - type: web
+    name: kasper-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: CORS_ORIGINS
+        value: http://localhost:8080 # replace with your public frontend URL

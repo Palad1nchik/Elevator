@@ -4,7 +4,7 @@ import ObjectsSlider from './ObjectsSlider.jsx'
 
 export default function ObjectsTeaser() {
   return (
-    <section className="section">
+    <section className="section section-alt">
       <div className="container">
         <div className="section-tag">Опыт</div>
         <h2>Реализованные объекты</h2>

@@ -1,5 +1,8 @@
 # nginx config for the production frontend container.
 # Serves the built React SPA and reverse-proxies /api to the Go backend.
+# Template processed by the nginx image's docker-entrypoint envsubst step at
+# container startup: ${BACKEND_PORT} comes from the environment, mirroring
+# how the Go backend itself reads PORT (backend/internal/config/config.go).
 server {
     listen 80;
     server_name _;
@@ -30,7 +33,7 @@ server {
 
     # API reverse proxy -> backend service (name "backend" comes from docker-compose).
     location /api/ {
-        proxy_pass http://backend:8080;
+        proxy_pass http://backend:${BACKEND_PORT};
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
