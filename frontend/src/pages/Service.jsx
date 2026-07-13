@@ -1,5 +1,6 @@
-import { SERVICE_POINTS, ADVANTAGES } from '../data/content.js'
+import { SERVICE_POINTS } from '../data/content.js'
 import CtaBand from '../components/CtaBand.jsx'
+import StatsStrip from '../components/StatsStrip.jsx'
 
 export default function Service() {
   return (
@@ -8,6 +9,7 @@ export default function Service() {
         <div className="container">
           <div className="section-tag">Сервис</div>
           <h2>Сервис и поддержка после запуска</h2>
+          <StatsStrip compact />
           <div className="split">
             <div>
               <p className="lead">
@@ -22,27 +24,13 @@ export default function Service() {
             </div>
             <div className="media-frame">
               <img
-                src="/photos/service-cabin.jpg"
-                alt="Специалисты KASPER в кабине лифта"
+                src="/photos/feature-safety-tech.jpg"
+                alt="Специалист KASPER настраивает систему безопасности лифта"
                 loading="lazy"
+                width="646"
+                height="1024"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-tag">Почему мы</div>
-          <h2>Ключевые преимущества</h2>
-          <div className="grid grid-3">
-            {ADVANTAGES.map((a) => (
-              <div className="card" key={a.idx}>
-                <div className="idx">{a.idx}</div>
-                <h3>{a.title}</h3>
-                <p>{a.text}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

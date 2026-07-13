@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
-import { STATS, AUDIENCES, COMPANY } from '../data/content.js'
+import { AUDIENCES, PILLARS, ABOUT, STEPS } from '../data/content.js'
 import CtaBand from '../components/CtaBand.jsx'
+import AdvantagesGrid from '../components/AdvantagesGrid.jsx'
+import ObjectsTeaser from '../components/ObjectsTeaser.jsx'
+import StatsStrip from '../components/StatsStrip.jsx'
 
 export default function Home() {
   return (
@@ -29,26 +32,38 @@ export default function Home() {
 
           <div className="hero-photo">
             <img
-              src="/photos/hero-towers.jpg"
-              alt="Жилой комплекс с лифтами KASPER в Астане"
+              src="/photos/feature-hero-shaft.jpg"
+              alt="Лифт KASPER в шахте жилого комплекса"
               loading="eager"
+              fetchPriority="high"
+              width="614"
+              height="1024"
             />
           </div>
         </div>
 
         <div className="container">
-          <div className="stats">
-            {STATS.map((s) => (
-              <div className="stat" key={s.label}>
-                <div className="num">{s.num}</div>
-                <div className="label">{s.label}</div>
+          <StatsStrip />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-tag">Что мы делаем</div>
+          <h2>Полный цикл лифтового оснащения объекта</h2>
+          <div className="grid grid-3">
+            {PILLARS.map((p) => (
+              <div className="card" key={p.idx}>
+                <div className="idx">{p.idx}</div>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container">
           <div className="section-tag">Для кого</div>
           <h2>Работаем с объектами любого масштаба</h2>
@@ -67,6 +82,42 @@ export default function Home() {
               Как мы работаем →
             </Link>
           </p>
+        </div>
+      </section>
+
+      <AdvantagesGrid />
+
+      <section className="section section-alt">
+        <div className="container">
+          <div className="split">
+            <div>
+              <div className="section-tag">{ABOUT.tag}</div>
+              <h2>{ABOUT.title}</h2>
+              <p className="lead">{ABOUT.text}</p>
+            </div>
+            <StatsStrip />
+          </div>
+        </div>
+      </section>
+
+      <ObjectsTeaser />
+
+      <section className="section section-alt">
+        <div className="container">
+          <div className="section-tag">Как мы работаем</div>
+          <h2>Монтаж лифтов под ключ без срывов сроков</h2>
+          <p className="lead">Вы видите сроки и результат на каждом этапе.</p>
+          <div className="steps">
+            {STEPS.map((s) => (
+              <div className="step" key={s.n}>
+                <div className="n">{s.n}</div>
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

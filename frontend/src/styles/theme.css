@@ -11,8 +11,8 @@
   --text-muted: #9db2ce;
   --text-dim: #6f89ab;
 
-  /* Accents */
-  --accent: #3e8bff;
+  /* Accents — tuned to match the KASPER hexagon logo's blue gradient */
+  --accent: #1e63c4;
   --accent-bright: #5ac8fa;
   --success: #37d49a;
   --whatsapp: #25d366;
@@ -22,10 +22,10 @@
   --font-head: 'Montserrat', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  /* Layout */
+  /* Layout — square/angular design language, no rounded corners */
   --maxw: 1180px;
-  --radius: 14px;
-  --radius-sm: 10px;
+  --radius: 0px;
+  --radius-sm: 0px;
   --gutter: 24px;
 
   /* Effects */
