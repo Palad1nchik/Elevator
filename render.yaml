@@ -23,6 +23,6 @@ services:
       - key: APP_ENV
         value: production
       - key: PORT
-        value: 8080
+        value: "8080"
       - key: CORS_ORIGINS
         value: http://localhost:8080 # replace with your public frontend URL
