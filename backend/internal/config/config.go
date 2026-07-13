@@ -11,6 +11,7 @@ type Config struct {
 	Host        string   // bind host
 	Port        string   // bind port
 	CORSOrigins []string // allowed browser origins for CORS
+	StaticDir   string   // if set, serve the built frontend (SPA) from this directory
 }
 
 // Load reads configuration from the environment, applying sensible defaults
@@ -21,6 +22,7 @@ func Load() Config {
 		Host:        getenv("HOST", "0.0.0.0"),
 		Port:        getenv("PORT", "8080"),
 		CORSOrigins: splitCSV(getenv("CORS_ORIGINS", "http://localhost:5173")),
+		StaticDir:   getenv("STATIC_DIR", ""),
 	}
 	return cfg
 }

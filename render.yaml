@@ -1,28 +1,24 @@
-# Render Blueprint for the Go backend.
+# Blueprint для Render: ОДИН веб-сервис, собираемый из корневого Dockerfile.
+# Go-бэкенд внутри контейнера отдаёт и API, и собранный React-фронтенд,
+# поэтому у сайта и API общий домен — не нужно связывать два сервиса,
+# настраивать CORS или зашивать URL бэкенда в сборку фронтенда.
 #
-# This exists because the Docker build was failing with
-# "stat /src/cmd/server: directory not found" — Render was building the
-# Docker image from the repository root instead of backend/, so `COPY . .`
-# copied the whole monorepo and ./cmd/server ended up nested one level too
-# deep (at /src/backend/cmd/server, not /src/cmd/server). rootDir fixes
-# that the same way docker-compose.yml's `context: ./backend` does locally.
+# Как деплоить — пошагово в DEPLOY.md. Кратко:
+#   Render Dashboard -> New -> Blueprint -> выбрать этот репозиторий -> Deploy.
 #
-# To use: Render Dashboard -> New -> Blueprint -> point at this repo.
-# If the backend service already exists and was created manually (not from
-# this blueprint), Render won't retroactively apply this file to it — either
-# recreate it via Blueprint, or set Root Directory: backend by hand in that
-# service's Settings and redeploy.
+# ВАЖНО: сервисы от старой двухсервисной схемы (back-zekm, front-q4gq),
+# созданные вручную, больше не нужны — удалите их в панели Render
+# (Settings -> Delete Service), чтобы не путаться и не занимать лимиты.
 services:
   - type: web
-    name: kasper-backend
+    name: kasper-site
     runtime: docker
-    rootDir: backend
+    plan: free # бесплатный тариф; без этой строки Blueprint создаст платный starter
     dockerfilePath: ./Dockerfile
     healthCheckPath: /api/health
     envVars:
       - key: APP_ENV
         value: production
-      - key: PORT
-        value: "8080"
-      - key: CORS_ORIGINS
-        value: http://localhost:8080 # replace with your public frontend URL
+      # PORT задавать не нужно: Render сам передаёт PORT (обычно 10000),
+      # а сервер читает его из окружения (backend/internal/config/config.go).
+      # CORS_ORIGINS не нужен: фронтенд и API на одном домене.

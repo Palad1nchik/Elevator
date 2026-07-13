@@ -1,5 +1,8 @@
 /out
-server
+# Только скомпилированный бинарник в корне backend/ — НЕ «server» без слэша:
+# паттерн без слэша игнорировал и папки исходников cmd/server и internal/server,
+# из-за чего main.go и router.go не попадали на GitHub и сборка на Render падала.
+/server
 *.exe
 .env
 .env.local

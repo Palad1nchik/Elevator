@@ -1,5 +1,5 @@
 // Tiny API client. In dev, requests to /api are proxied to the Go backend by Vite.
-// In production, nginx reverse-proxies /api to the backend container.
+// In production the Go server serves both the site and /api from one origin.
 // Override the base URL at build time with VITE_API_BASE if the API lives elsewhere.
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
 
