@@ -1,0 +1,10 @@
+# Keep the build context small: only frontend/ and backend/ sources matter.
+.git
+.claude
+.env
+legacy
+*.md
+docker-compose.yml
+render.yaml
+frontend/node_modules
+frontend/dist

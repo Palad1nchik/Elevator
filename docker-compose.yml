@@ -1,40 +1,23 @@
-# Kasper Elevator — full stack: React frontend (nginx) + Go backend.
+# Kasper Elevator — весь сайт в одном контейнере: Go-бэкенд отдаёт и API,
+# и собранный React-фронтенд. Это тот же образ, который деплоится на Render.
 #
 #   docker compose up --build
 #
-# Frontend is served on http://localhost:8080 and reverse-proxies /api to the
-# backend. The backend is not published to the host by default in production;
-# it's reachable only inside the compose network via the service name "backend".
+# Сайт: http://localhost:8080 · API: http://localhost:8080/api/health
 
 services:
-  backend:
+  web:
     build:
-      context: ./backend
-    image: kasper-backend:latest
+      context: .
+    image: kasper-site:latest
     restart: unless-stopped
     environment:
       APP_ENV: ${APP_ENV:-production}
-      PORT: "8080"
-      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
-    expose:
-      - "8080"
+    ports:
+      - "${WEB_PORT:-8080}:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/api/health"]
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 5s
-    # Scale horizontally for higher load:  docker compose up --scale backend=3
-    # (the in-memory lead store is per-replica — move to Postgres before scaling).
-
-  frontend:
-    build:
-      context: ./frontend
-      args:
-        VITE_API_BASE: /api
-    image: kasper-frontend:latest
-    restart: unless-stopped
-    depends_on:
-      - backend
-    ports:
-      - "${WEB_PORT:-8080}:80"
