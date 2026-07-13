@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { COMPANY } from '../data/content.js'
+import { COMPANY, NAV } from '../data/content.js'
 
 // Description lines taken from the company business card ("Обсудим ваш объект").
 const PITCH = [
@@ -15,7 +15,7 @@ export default function Footer() {
         {/* Brand + pitch */}
         <div className="footer-col footer-brand-col">
           <div className="brand">
-            <img src="/logo-mark.svg" alt="" className="brand-mark" width="40" height="40" />
+            <img src="/logo-mark.png" alt="" className="brand-mark" width="40" height="40" />
             <span className="brand-text">
               {COMPANY.name}
               <small>{COMPANY.tagline}</small>
@@ -29,6 +29,18 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Navigation */}
+        <div className="footer-col">
+          <h4 className="footer-title">Навигация</h4>
+          <ul className="footer-nav">
+            {NAV.map((item) => (
+              <li key={item.to}>
+                <Link to={item.to}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Contacts */}
         <div className="footer-col">
           <h4 className="footer-title">Контакты</h4>
@@ -38,12 +50,6 @@ export default function Footer() {
             <dt>Телефон</dt>
             <dd>
               <a href={COMPANY.phoneHref}>{COMPANY.phone}</a>
-            </dd>
-            <dt>Сайт</dt>
-            <dd>
-              <a href={COMPANY.siteHref} target="_blank" rel="noopener noreferrer">
-                {COMPANY.site}
-              </a>
             </dd>
             <dt>Email</dt>
             <dd>

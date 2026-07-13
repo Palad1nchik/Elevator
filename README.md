@@ -14,7 +14,7 @@
 .
 ├── frontend/        React SPA (multi-page via React Router)
 │   └── public/
-│       ├── favicon.svg, logo-mark.svg   логотип KASPER (SVG)
+│       ├── favicon.png, logo-mark.png   логотип KASPER (PNG, прозрачный фон)
 │       └── photos/                      фото объектов/команды
 ├── backend/         Go REST API (health + leads/заявки)
 ├── legacy/          исходный bundled-сайт (для справки)
@@ -37,10 +37,11 @@
 
 ## Логотип и фавикон
 
-Логотип воссоздан как **SVG** (`frontend/public/logo-mark.svg` — для шапки,
-`frontend/public/favicon.svg` — для вкладки браузера). Чтобы заменить на
-официальный файл, положите свой `logo-mark.svg` / `favicon.svg` в `frontend/public/`
-(или PNG и поправьте `<link rel="icon">` в `frontend/index.html`).
+Официальный логотип клиента (`frontend/public/logo-mark.png` — для шапки/футера,
+`frontend/public/favicon.png` — для вкладки браузера, наложен на скруглённый
+тёмно-синий фон бренда). Чтобы заменить, положите свой `logo-mark.png` /
+`favicon.png` в `frontend/public/` (или другой формат и поправьте пути в
+`Navbar.jsx`/`Footer.jsx`/`index.html`).
 
 ## Фотографии
 

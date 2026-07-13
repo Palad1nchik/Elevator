@@ -2,6 +2,11 @@
 .env
 .env.local
 
+# Internal/local-only — contains business/contact info and machine-specific paths,
+# not meant to be published in the repo.
+CLAUDE.md
+.claude/launch.json
+
 # Dependencies / build artifacts
 node_modules/
 frontend/dist/
