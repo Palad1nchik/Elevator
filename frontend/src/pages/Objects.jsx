@@ -10,7 +10,7 @@ export default function Objects() {
         <div className="container">
           <div className="section-tag">Опыт</div>
           <h2>Реализованные объекты</h2>
-          <p className="lead">95% объектов сдаём без замечаний по лифтам.</p>
+          <p className="lead">100% объектов сдаём без замечаний по лифтам.</p>
           <StatsStrip compact />
 
           <ObjectsSlider items={OBJECTS} />

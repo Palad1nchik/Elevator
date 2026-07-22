@@ -366,6 +366,73 @@
   margin: 0;
 }
 
+/* ---------- Testimonials ---------- */
+.testimonial-card {
+  position: relative;
+  padding-top: 40px;
+}
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 4px;
+  left: 26px;
+  font-family: var(--font-head);
+  font-size: 64px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.35;
+}
+.testimonial-text {
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+}
+.testimonial-role {
+  margin-top: 16px;
+  color: var(--accent-bright);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Document / certificate cards ---------- */
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  padding: 14px;
+}
+.doc-card-image {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  aspect-ratio: 3 / 4;
+  background: #fff;
+}
+.doc-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.doc-card h3 {
+  font-size: 18px;
+  margin: 14px 0 6px;
+}
+.doc-card p {
+  font-size: 13px;
+}
+.doc-card-link {
+  margin-top: 14px;
+  color: var(--accent-bright);
+  font-weight: 600;
+  font-size: 14px;
+}
+
 /* ---------- Media frames & photo cards ---------- */
 .media-frame {
   border-radius: var(--radius);
@@ -423,26 +490,22 @@
 }
 .slider-card {
   flex: 0 0 auto;
-  width: 360px;
   scroll-snap-align: start;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
 }
 .slider-card-img {
-  height: 240px;
+  height: 210px;
   overflow: hidden;
 }
 .slider-card-img img {
-  width: 100%;
+  display: block;
   height: 100%;
-  object-fit: cover;
-  /* Source crops carry a thin frame from the original slide art along
-     their edges; scale past it so the photo fills the card edge-to-edge. */
-  transform: scale(1.15);
+  width: auto;
   transition: transform 0.4s ease;
 }
 .slider-card:hover .slider-card-img img {
-  transform: scale(1.22);
+  transform: scale(1.05);
 }
 .slider-card h3 {
   font-size: 18px;

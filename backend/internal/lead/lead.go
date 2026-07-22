@@ -45,6 +45,9 @@ func (in *Input) Validate() error {
 	if len(in.Phone) > 40 {
 		return errors.New("некорректный телефон")
 	}
+	if in.Message == "" {
+		return errors.New("укажите комментарий")
+	}
 	if len(in.Message) > 2000 {
 		return errors.New("комментарий слишком длинный")
 	}

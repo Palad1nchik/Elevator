@@ -3,7 +3,7 @@ import { COMPANY } from '../data/content.js'
 
 // Reusable call-to-action banner used at the bottom of most pages.
 export default function CtaBand({
-  title = 'Рассчитаем сроки и стоимость за 1 день',
+  title = 'Рассчитаем сроки и стоимость за 5-7 дней',
   text = 'Даём точный расчёт сроков и стоимости под ваш объект.',
 }) {
   return (

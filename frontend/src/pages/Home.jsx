@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
-import { AUDIENCES, PILLARS, ABOUT, STEPS } from '../data/content.js'
+import { AUDIENCES, PILLARS, STEPS } from '../data/content.js'
 import CtaBand from '../components/CtaBand.jsx'
 import AdvantagesGrid from '../components/AdvantagesGrid.jsx'
 import ObjectsTeaser from '../components/ObjectsTeaser.jsx'
 import StatsStrip from '../components/StatsStrip.jsx'
+import Certificates from '../components/Certificates.jsx'
+import Testimonials from '../components/Testimonials.jsx'
 
 export default function Home() {
   return (
@@ -89,18 +91,7 @@ export default function Home() {
 
       <AdvantagesGrid />
 
-      <section className="section section-alt">
-        <div className="container">
-          <div className="split">
-            <div>
-              <div className="section-tag">{ABOUT.tag}</div>
-              <h2>{ABOUT.title}</h2>
-              <p className="lead">{ABOUT.text}</p>
-            </div>
-            <StatsStrip />
-          </div>
-        </div>
-      </section>
+      <Certificates />
 
       <section className="section">
         <div className="container">
@@ -120,6 +111,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <CtaBand />
     </>

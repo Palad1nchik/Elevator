@@ -1,6 +1,6 @@
 import { ADVANTAGES } from '../data/content.js'
 
-export default function AdvantagesGrid({ tag = 'Почему мы', title = 'Почему выбирают KASPER' }) {
+export default function AdvantagesGrid({ tag = 'Почему мы', title = 'Почему выбирают Eurasia Lift KZ' }) {
   return (
     <section className="section">
       <div className="container">

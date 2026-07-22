@@ -16,7 +16,8 @@
 ├── frontend/        React SPA (multi-page via React Router)
 │   └── public/
 │       ├── favicon.png, logo-mark.png   логотип KASPER (PNG, прозрачный фон)
-│       └── photos/                      фото объектов/команды
+│       ├── photos/                      фото объектов/команды
+│       └── documents/                   аттестаты/сертификаты (PDF), показаны на /servis
 ├── backend/         Go REST API (health + leads/заявки) + раздача статики
 ├── legacy/          исходный bundled-сайт (для справки)
 ├── Dockerfile       сборка всего сайта в один образ (frontend build → go build)
@@ -149,9 +150,3 @@ curl -X POST http://localhost:8080/api/leads \
 - [ ] HTTPS / TLS перед стеком.
 - [ ] Rate limiting на `POST /api/leads`.
 - [ ] Заменить SVG-логотип на официальный файл при наличии.
-#   E l e v a t o r  
- #   E l e v a t o r  
- #   E l e v a t o r  
- #   E l e v a t o r  
- #   E l e v a t o r  
- 

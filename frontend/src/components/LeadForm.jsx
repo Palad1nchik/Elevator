@@ -79,14 +79,15 @@ export default function LeadForm() {
       </div>
 
       <div className="field">
-        <label htmlFor="message">Комментарий (необязательно)</label>
+        <label htmlFor="message">Комментарий</label>
         <textarea
           id="message"
           name="message"
           rows={3}
           value={form.message}
           onChange={update}
-          placeholder="Количество лифтов, сроки, этажность…"
+          required
+          placeholder="Предоставить техническое задание на лифты, для точного расчёта сроков и стоимости"
         />
       </div>
 

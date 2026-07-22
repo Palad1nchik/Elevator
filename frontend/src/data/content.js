@@ -2,8 +2,8 @@
 // later move to a CMS or fetch from the Go backend without touching components.
 
 export const COMPANY = {
-  name: 'KASPER',
-  tagline: 'LIFT SOLUTIONS',
+  name: 'EURASIA LIFT',
+  tagline: 'KZ',
   region: 'KZ',
   phone: '+7 702 230-22-38',
   phoneHref: 'tel:+77022302238',
@@ -11,7 +11,7 @@ export const COMPANY = {
   emailHref: 'mailto:eurasia.lift.kz@gmail.com',
   whatsapp: 'https://wa.me/77022302238',
   instagram: 'https://instagram.com/eurasia.lift',
-  address: 'г. Астана, район Есиль, шоссе Коргалжын, 25А',
+  address: 'г. Астана, ул. Аманжол Болекпаева, дом-12, ЖК "Юпитер", офис-9',
   contactPerson: {
     role: 'Заместитель директора',
     name: 'Спичкин Владимир Владимирович',
@@ -20,13 +20,13 @@ export const COMPANY = {
   year: 2026,
 }
 
-// Coordinates for "Шоссе Коргалжын, 25" (Yesil district, Astana) from 2GIS —
-// used to center the map on the Contact page. 25А is the same block.
+// Coordinates for "ул. Аманжол Болекпаева, 12, ЖК Юпитер" (Astana) from
+// OpenStreetMap Nominatim — used to center the map on the Contact page.
 export const MAP = {
-  lat: 51.147815,
-  lon: 71.366995,
-  bbox: '71.35,51.14,71.38,51.16',
-  openLink: 'https://www.openstreetmap.org/?mlat=51.147815&mlon=71.366995#map=16/51.147815/71.366995',
+  lat: 51.122499,
+  lon: 71.499538,
+  bbox: '71.485,51.1125,71.515,51.1325',
+  openLink: 'https://www.openstreetmap.org/?mlat=51.122499&mlon=71.499538#map=16/51.122499/71.499538',
 }
 
 export const NAV = [
@@ -38,9 +38,9 @@ export const NAV = [
 ]
 
 export const STATS = [
-  { num: '100+', label: 'объектов' },
-  { num: '300+', label: 'лифтов' },
-  { num: '80', label: 'лет технологий' },
+  { num: '200+', label: 'объектов' },
+  { num: '500+', label: 'лифтов' },
+  { num: '100%', label: 'без замечаний сдаём объект' },
 ]
 
 export const AUDIENCES = [
@@ -69,19 +69,16 @@ export const PROBLEMS = [
 ]
 
 export const STEPS = [
-  { n: 1, title: 'Подбор и поставка', text: 'Подбираем оборудование и поставляем со склада в РК.' },
+  { n: 1, title: 'Подбор и поставка', text: 'Изготавливаем оборудование под Ваш проект и поставляем уже готовое оборудование на ваш объект.' },
   { n: 2, title: 'Монтаж на объекте', text: 'Монтируем по графику объекта.' },
   { n: 3, title: 'Настройка и запуск', text: 'Пусконаладка и проверка.' },
   { n: 4, title: 'Подготовка к приёмке', text: 'Готовим лифты к сдаче без доработок.' },
-  { n: 5, title: 'Сопровождение', text: 'Остаёмся на связи после запуска.' },
+  { n: 5, title: 'Сопровождение', text: 'Остаёмся после монтажа на обслуживание лифтов.' },
 ]
 
 // Real completed objects, sourced from the company's own project deck.
 export const OBJECTS = [
   { name: 'Акмешит - 3', img: '/photos/obj-akmeshit-3.jpg' },
-  { name: 'ЖК Кыз Жибек - 38', img: '/photos/obj-kyz-zhibek-38.jpg' },
-  { name: 'Казанат 1/1', img: '/photos/obj-kazanat-1-1.jpg' },
-  { name: 'Керей, Жанибек хан 30', img: '/photos/obj-korey-zhanibek-30.jpg' },
   { name: 'ЖК "Санат"', img: '/photos/obj-sanat.jpg' },
   { name: 'ЖК "Kurmet"', img: '/photos/obj-kurmet.jpg' },
   { name: 'ЖК "Triumph Avenue"', img: '/photos/obj-triumph-avenue.jpg' },
@@ -112,6 +109,9 @@ export const OBJECTS = [
   { name: 'ЖК "Сказка"', img: '/photos/obj-skazka.jpg' },
   { name: 'ЖК "Медиаполь"', img: '/photos/obj-mediapol.jpg' },
   { name: 'ЖК "Отау"', img: '/photos/obj-otau.jpg' },
+  { name: 'ЖК Кыз Жибек - 38', img: '/photos/obj-kyz-zhibek-38.jpg' },
+  { name: 'Казанат 1/1', img: '/photos/obj-kazanat-1-1.jpg' },
+  { name: 'Керей, Жанибек хан 30', img: '/photos/obj-korey-zhanibek-30.jpg' },
 ]
 
 export const PRODUCTION_POINTS = [
@@ -155,11 +155,52 @@ export const PILLARS = [
   },
 ]
 
-export const ABOUT = {
-  tag: 'О компании',
-  title: 'Официальный представитель KASPER в Казахстане',
-  text: 'Работаем с заводом KASPER, у которого 80-летняя история производства лифтового оборудования, напрямую — без посредников. Держим собственный склад запчастей в Казахстане, поэтому не зависим от сроков зарубежных поставок и закрываем лифтовую часть объекта под ключ: от поставки до сервиса после запуска.',
-}
+// Official industrial-safety attestations (Committee for Industrial Safety,
+// Ministry of Emergency Situations of the Republic of Kazakhstan). PDFs live
+// in `public/documents/`.
+export const CERTIFICATES = [
+  {
+    title: 'Сертификат дилерства',
+    issuer: 'Kasper Elevator Co., LTD',
+    issued: '01.01.2016',
+    image: '/documents/sertifikat-dilerstva-kasper.jpg',
+  },
+  {
+    title: 'Аттестат на право монтажа лифтов и эскалаторов',
+    number: 'KZ82VEK00018462',
+    issued: '22.01.2026',
+    validity: 'действителен 5 лет',
+    image: '/documents/attestat-montazh-liftov-eskalatorov.png',
+    file: '/documents/attestat-montazh-liftov-eskalatorov.pdf',
+  },
+  {
+    title: 'Аттестат на право технического обслуживания лифтов, эскалаторов и траволаторов',
+    number: 'KZ20VEK00018802',
+    issued: '27.04.2026',
+    validity: 'действителен 5 лет',
+    image: '/documents/attestat-obsluzhivanie-liftov.png',
+    file: '/documents/attestat-obsluzhivanie-liftov.pdf',
+  },
+]
+
+export const TESTIMONIALS = [
+  {
+    role: 'Застройщик',
+    text: 'Работаем с компанией уже на третьем объекте. Для нас как застройщика ключевое — сроки, и здесь ни разу не подвели. Всегда на связи, вопросы закрывают быстро и без лишней нервотрёпки. Профессиональный подход, приятно иметь дело.',
+  },
+  {
+    role: 'Бизнес-центр',
+    text: 'Искали подрядчика в бизнес-центр, где важны и качество, и соблюдение сроков. Всё выполнили чётко, арендаторы довольны, наши задачи закрыты. Отдельно отмечу человеческий подход и оперативность.',
+  },
+  {
+    role: 'Девелопер',
+    text: 'Заходили в сложный проект — помогли грамотно адаптировать решения под наш бюджет. Всё сдали вовремя, без сдвигов дедлайнов и сюрпризов. Сильные специалисты, продолжим сотрудничество.',
+  },
+  {
+    role: 'Управляющая компания',
+    text: 'Управляем несколькими коммерческими объектами, поэтому есть с чем сравнивать. Работа под ключ, без лишней бюрократии и бесконечных согласований. При возникновении рабочих моментов подключаются моментально. Надёжный партнёр.',
+  },
+]
 
 export const OBJECT_TYPES = [
   'Жилой комплекс (ЖК)',

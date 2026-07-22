@@ -1,6 +1,7 @@
 import { SERVICE_POINTS } from '../data/content.js'
 import CtaBand from '../components/CtaBand.jsx'
 import StatsStrip from '../components/StatsStrip.jsx'
+import Certificates from '../components/Certificates.jsx'
 
 export default function Service() {
   return (
@@ -25,7 +26,7 @@ export default function Service() {
             <div className="media-frame">
               <img
                 src="/photos/feature-safety-tech.jpg"
-                alt="Специалист KASPER настраивает систему безопасности лифта"
+                alt="Специалист Eurasia Lift KZ настраивает систему безопасности лифта"
                 loading="lazy"
                 width="646"
                 height="1024"
@@ -34,6 +35,8 @@ export default function Service() {
           </div>
         </div>
       </section>
+
+      <Certificates />
 
       <CtaBand title="Возьмём ваши лифты на обслуживание" />
     </>

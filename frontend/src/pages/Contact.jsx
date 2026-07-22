@@ -8,7 +8,7 @@ export default function Contact() {
     <section className="section page-head">
       <div className="container">
         <div className="section-tag">Заявка</div>
-        <h2>Рассчитаем сроки и стоимость за 1 день</h2>
+        <h2>Рассчитаем сроки и стоимость за 5-7 дней</h2>
         <p className="lead">
           Даём точный расчёт сроков и стоимости под ваш объект.
         </p>
@@ -21,7 +21,7 @@ export default function Contact() {
             <div className="media-frame" style={{ marginBottom: 20 }}>
               <img
                 src="/photos/feature-team-review.jpg"
-                alt="Команда KASPER Lift Solutions на объекте"
+                alt="Команда Eurasia Lift KZ на объекте"
                 loading="lazy"
                 width="646"
                 height="1024"
