@@ -7,6 +7,7 @@ import ForWhom from './pages/ForWhom.jsx'
 import Objects from './pages/Objects.jsx'
 import Service from './pages/Service.jsx'
 import Contact from './pages/Contact.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/obyekty" element={<Objects />} />
           <Route path="/servis" element={<Service />} />
           <Route path="/kontakty" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

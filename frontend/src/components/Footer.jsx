@@ -73,6 +73,8 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         © {COMPANY.year} {COMPANY.name} {COMPANY.tagline}. Эксклюзивный представитель в Казахстане.
+        {' · '}
+        <Link to="/privacy-policy">Политика конфиденциальности</Link>
       </div>
     </footer>
   )

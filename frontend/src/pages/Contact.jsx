@@ -1,7 +1,7 @@
 import LeadForm from '../components/LeadForm.jsx'
 import StatsStrip from '../components/StatsStrip.jsx'
 import MapEmbed from '../components/MapEmbed.jsx'
-import { COMPANY } from '../data/content.js'
+import { COMPANY, MAP } from '../data/content.js'
 
 export default function Contact() {
   return (
@@ -49,6 +49,16 @@ export default function Contact() {
         </div>
 
         <div style={{ marginTop: 40 }}>
+          <p style={{ marginBottom: 12 }}>
+            <a
+              href={MAP.twoGisLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--accent-bright)' }}
+            >
+              Ссылка 2ГИС — нажмите, чтобы перейти →
+            </a>
+          </p>
           <MapEmbed />
         </div>
       </div>

@@ -27,6 +27,7 @@ export const MAP = {
   lon: 71.499538,
   bbox: '71.485,51.1125,71.515,51.1325',
   openLink: 'https://www.openstreetmap.org/?mlat=51.122499&mlon=71.499538#map=16/51.122499/71.499538',
+  twoGisLink: `https://2gis.kz/astana/search/${encodeURIComponent(COMPANY.address)}`,
 }
 
 export const NAV = [
@@ -76,9 +77,24 @@ export const STEPS = [
   { n: 5, title: 'Сопровождение', text: 'Остаёмся после монтажа на обслуживание лифтов.' },
 ]
 
+// Curated set for the homepage slider (10 objects with real client photos).
+// The full "Объекты" page keeps showing the complete OBJECTS list below.
+export const HOME_OBJECTS = [
+  { name: 'ЖК "Мадиленд"', img: '/photos/home-madiland.jpg' },
+  { name: 'Бизнес-центр "Time"', img: '/photos/home-time-business-center.jpg' },
+  { name: 'Бизнес-центр "Park Line"', img: '/photos/home-park-line.jpg' },
+  { name: 'ЖК "Prime Park"', img: '/photos/home-prime-park.jpg' },
+  { name: 'Hotel Burabay Golf Club', img: '/photos/home-burabay-golf-club.jpg' },
+  { name: 'ЖК "Korkem Tower"', img: '/photos/home-korkem-tower.jpg' },
+  { name: 'ЖК "Triumph Avenue"', img: '/photos/home-triumph-avenue.jpg' },
+  { name: 'ЖК "Otbasy", г. Шымкент', img: '/photos/home-otbasy-shymkent.jpg' },
+  { name: 'Городская станция скорой медицинской помощи, г. Астана', img: '/photos/home-ambulance-astana.jpg' },
+  { name: 'ЖК "Hokkaido"', img: '/photos/home-hokkaido.jpg' },
+]
+
 // Real completed objects, sourced from the company's own project deck.
 export const OBJECTS = [
-  { name: 'Акмешит - 3', img: '/photos/obj-akmeshit-3.jpg' },
+  { name: 'Бизнес-центр "Park Line"', img: '/photos/obj-akmeshit-3.jpg' },
   { name: 'ЖК "Санат"', img: '/photos/obj-sanat.jpg' },
   { name: 'ЖК "Kurmet"', img: '/photos/obj-kurmet.jpg' },
   { name: 'ЖК "Triumph Avenue"', img: '/photos/obj-triumph-avenue.jpg' },
@@ -92,7 +108,7 @@ export const OBJECTS = [
   { name: 'ЖК "Город 72"', img: '/photos/obj-gorod-72.jpg' },
   { name: 'ЖК "Биік Шаңырақ"', img: '/photos/obj-biik-shanyrak.jpg' },
   { name: 'Б.Момышулы 2/11', img: '/photos/obj-momyshuly-2-11.jpg' },
-  { name: 'Т.Рыскулова 8/1', img: '/photos/obj-ryskulova-8-1.jpg' },
+  { name: 'Городская станция скорой медицинской помощи, г. Астана', img: '/photos/obj-ryskulova-8-1.jpg' },
   { name: 'Сыганак 16', img: '/photos/obj-syganak-16.jpg' },
   { name: 'ЖК "Созак"', img: '/photos/obj-sozak.jpg' },
   { name: 'ЖК "Торонто"', img: '/photos/obj-toronto.jpg' },
@@ -109,9 +125,9 @@ export const OBJECTS = [
   { name: 'ЖК "Сказка"', img: '/photos/obj-skazka.jpg' },
   { name: 'ЖК "Медиаполь"', img: '/photos/obj-mediapol.jpg' },
   { name: 'ЖК "Отау"', img: '/photos/obj-otau.jpg' },
-  { name: 'ЖК Кыз Жибек - 38', img: '/photos/obj-kyz-zhibek-38.jpg' },
-  { name: 'Казанат 1/1', img: '/photos/obj-kazanat-1-1.jpg' },
-  { name: 'Керей, Жанибек хан 30', img: '/photos/obj-korey-zhanibek-30.jpg' },
+  { name: 'ЖК "Мадиленд"', img: '/photos/obj-kyz-zhibek-38.jpg' },
+  { name: 'Бизнес-центр "Time"', img: '/photos/obj-kazanat-1-1.jpg' },
+  { name: 'ЖК "Prime Park"', img: '/photos/obj-korey-zhanibek-30.jpg' },
 ]
 
 export const PRODUCTION_POINTS = [
