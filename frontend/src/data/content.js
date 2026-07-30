@@ -103,7 +103,7 @@ export const OBJECTS = [
   { name: 'ЖК "Басқару - 5"', img: '/photos/obj-baskaru-5.jpg' },
   { name: 'ЖК "Korkem Tower"', img: '/photos/obj-korkem-tower.jpg' },
   { name: 'ЖК "Айнакөл"', img: '/photos/obj-ainakol.jpg' },
-  { name: 'ЖК "Сказка"', img: '/photos/obj-hokkaido.jpg' },
+  { name: 'ЖК "Hokkaido"', img: '/photos/obj-hokkaido.jpg' },
   { name: 'ЖК "Медина"', img: '/photos/obj-medina.jpg' },
   { name: 'ЖК "Город 72"', img: '/photos/obj-gorod-72.jpg' },
   { name: 'ЖК "Биік Шаңырақ"', img: '/photos/obj-biik-shanyrak.jpg' },
