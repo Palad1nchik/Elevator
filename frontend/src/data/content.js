@@ -89,7 +89,7 @@ export const HOME_OBJECTS = [
   { name: 'ЖК "Triumph Avenue"', img: '/photos/home-triumph-avenue.jpg' },
   { name: 'ЖК "Otbasy", г. Шымкент', img: '/photos/home-otbasy-shymkent.jpg' },
   { name: 'Городская станция скорой медицинской помощи, г. Астана', img: '/photos/home-ambulance-astana.jpg' },
-  { name: 'ЖК "Hokkaido"', img: '/photos/home-hokkaido.jpg' },
+  { name: 'ЖК "Сказка"', img: '/photos/home-hokkaido.jpg' },
 ]
 
 // Real completed objects, sourced from the company's own project deck.
@@ -103,7 +103,7 @@ export const OBJECTS = [
   { name: 'ЖК "Басқару - 5"', img: '/photos/obj-baskaru-5.jpg' },
   { name: 'ЖК "Korkem Tower"', img: '/photos/obj-korkem-tower.jpg' },
   { name: 'ЖК "Айнакөл"', img: '/photos/obj-ainakol.jpg' },
-  { name: 'ЖК "Hokkaido"', img: '/photos/obj-hokkaido.jpg' },
+  { name: 'ЖК "Сказка"', img: '/photos/obj-hokkaido.jpg' },
   { name: 'ЖК "Медина"', img: '/photos/obj-medina.jpg' },
   { name: 'ЖК "Город 72"', img: '/photos/obj-gorod-72.jpg' },
   { name: 'ЖК "Биік Шаңырақ"', img: '/photos/obj-biik-shanyrak.jpg' },
