@@ -10,13 +10,13 @@ export default function MapEmbed() {
     <div>
       <iframe
         className="map-embed"
-        title="Карта — как нас найти"
+        title="Карта - как нас найти"
         src={EMBED_SRC}
         loading="lazy"
       />
       <p className="lead" style={{ margin: '14px 0 0' }}>
         {COMPANY.address}
-        {' — '}
+        {' - '}
         <a href={MAP.openLink} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-bright)' }}>
           открыть карту крупнее →
         </a>

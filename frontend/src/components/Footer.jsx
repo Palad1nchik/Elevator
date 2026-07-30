@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { COMPANY, NAV } from '../data/content.js'
 
 // Description lines taken from the company business card ("Обсудим ваш объект").
@@ -9,6 +9,16 @@ const PITCH = [
 ]
 
 export default function Footer() {
+  const { pathname } = useLocation()
+
+  // Route-change scroll-to-top (see ScrollToTop.jsx) only fires when the pathname
+  // actually changes, so clicking this CTA while already on /kontakty did nothing.
+  const handleCtaClick = () => {
+    if (pathname === '/kontakty') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
     <footer className="footer">
       <div className="container footer-grid">
@@ -65,7 +75,12 @@ export default function Footer() {
           <p>
             <a href={COMPANY.phoneHref}>{COMPANY.contactPerson.phone}</a>
           </p>
-          <Link to="/kontakty" className="btn btn-primary" style={{ marginTop: 14 }}>
+          <Link
+            to="/kontakty"
+            className="btn btn-primary"
+            style={{ marginTop: 14 }}
+            onClick={handleCtaClick}
+          >
             Написать и получить расчёт
           </Link>
         </div>

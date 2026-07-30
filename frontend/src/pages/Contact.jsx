@@ -56,7 +56,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               style={{ color: 'var(--accent-bright)' }}
             >
-              Ссылка 2ГИС — нажмите, чтобы перейти →
+              Ссылка 2ГИС - нажмите, чтобы перейти →
             </a>
           </p>
           <MapEmbed />

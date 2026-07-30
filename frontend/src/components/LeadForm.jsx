@@ -114,7 +114,7 @@ export default function LeadForm() {
       <p className="form-note">
         Нажимая кнопку, вы соглашаетесь с{' '}
         <Link to="/privacy-policy">политикой конфиденциальности</Link>. Заявка будет открыта как
-        сообщение в WhatsApp — сайт не хранит и никуда, кроме WhatsApp, её не передаёт.
+        сообщение в WhatsApp - сайт не хранит и никуда, кроме WhatsApp, её не передаёт.
       </p>
     </form>
   )
